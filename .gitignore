@@ -1,3 +1,7 @@
+# app specific files
+error.log
+openaikey.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
