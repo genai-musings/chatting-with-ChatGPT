@@ -13,7 +13,7 @@ export OPENAI_KEY="Your OpenAI key"
 python main.py
 ```
 
-To generate an OpenAI key browse to [OpenAI API Keys](https://beta.openai.com/account/api-keys) and select "Create new secret key".
+To generate an OpenAI key browse to [OpenAI API Keys](https://platform.openai.com/account/api-keys) and select "Create new secret key".
 
 
 ## To run unit tests
@@ -24,4 +24,4 @@ pytest
 
 ## OpenAI API Reference
 
-For more information on the API available see the [OpenAI API Reference Documentation](https://beta.openai.com/docs/api-reference).
+For more information on the API available see the [OpenAI API Reference Documentation](https://platform.openai.com/docs/api-reference).
