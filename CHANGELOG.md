@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.0] - 2023-05-24
 
-- [ADDED] CHANGELOG.d
+- [ADDED] CHANGELOG.md
 - [ADDED] GitHub Action to run unit tests
 
 ## [1.0.0] - 2023-01-18
