@@ -1,8 +1,6 @@
 Changelog
 CHANGELOG
-DALL
+GPT
 md
 pylint
-OpenAI
-OPENAI
 yamllint
