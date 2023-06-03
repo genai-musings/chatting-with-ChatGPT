@@ -1,6 +1,9 @@
 Changelog
 CHANGELOG
+ChatGPT
+davinci
 GPT
 md
+OpenAI
 pylint
 yamllint
