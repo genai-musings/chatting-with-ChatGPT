@@ -1,7 +1,7 @@
-
+"""main program entry point"""
 import os
-import openai
 import logging
+import openai
 from openAiCompletion import openAiCompletion
 
 def main():
@@ -19,19 +19,19 @@ def main():
 
         if prompt == "":
             break
-        
+
         try:
             response = client.generate_response(prompt)
             print(response)
         except openai.OpenAIError as e:
             # Handle the exception
             # Log the error message and exception type
-            logging.error(f"OpenAIError: {e}", exc_info=True)            
+            logging.error(f"OpenAIError: {e}", exc_info=True)
             print(f"Error: {e}")
         except Exception as e:
             # Handle the exception
             # Log the error message and exception type
-            logging.error(f"Error: {e}", exc_info=True)  
+            logging.error(f"Error: {e}", exc_info=True)
             print("An error occurred, please try again.")
 
 if __name__ == "__main__":

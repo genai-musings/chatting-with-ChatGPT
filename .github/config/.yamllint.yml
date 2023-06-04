@@ -1,0 +1,10 @@
+---
+extends: default
+
+rules:
+  line-length: disable
+  new-lines: disable
+  truthy: disable
+
+ignore:
+  "**/megalinter-reports/**"

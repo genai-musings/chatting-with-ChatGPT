@@ -1,0 +1,12 @@
+[pylint]
+disable = missing-docstring, invalid-name, broad-except, logging-fstring-interpolation, wrong-import-position
+min-public-methods=1
+
+#[MESSAGES CONTROL]
+#enable = logging-not-lazy
+
+# Maximum number of locals for function / method body
+max-locals=25
+
+# Maximum number of arguments for function / method
+max-args=10
