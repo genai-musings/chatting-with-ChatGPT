@@ -1,6 +1,7 @@
+"""OpenAI Completion class unit tests."""
 import unittest
-import openai
 from unittest.mock import patch, MagicMock
+import openai
 from openAiCompletion import openAiCompletion
 
 class TestOpenAiCompletion(unittest.TestCase):
@@ -9,8 +10,9 @@ class TestOpenAiCompletion(unittest.TestCase):
         self.engine = 'engine'
         self.client = openAiCompletion(api_key=self.api_key, engine=self.engine)
 
-    # This test case tests that the generate_response method returns the correct response when called with a valid prompt.
-    # Using the patch decorator to mock the openai.Completion.create method. 
+    # This test case tests that the generate_response method returns
+    # the correct response when called with a valid prompt.
+    # Using the patch decorator to mock the openai.Completion.create method.
     @patch('openai.Completion.create')
     def test_generate_response(self, mock_create):
         # set up mock return value
@@ -30,8 +32,9 @@ class TestOpenAiCompletion(unittest.TestCase):
             temperature=0.7
         )
 
-    # This test case checks that the generate_response method raises an openai.OpenAIError when the API key is invalid.
-    # Using the patch decorator to mock the openai.Completion.create method. 
+    # This test case checks that the generate_response method raises
+    # an openai.OpenAIError when the API key is invalid.
+    # Using the patch decorator to mock the openai.Completion.create method.
     @patch('openai.Completion.create')
     def test_generate_response_with_invalid_api_key(self, mock_create):
         openai.api_key = None
