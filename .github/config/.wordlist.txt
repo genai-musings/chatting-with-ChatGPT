@@ -6,4 +6,5 @@ GPT
 md
 OpenAI
 pylint
+YAML
 yamllint
