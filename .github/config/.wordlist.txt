@@ -1,3 +1,4 @@
+Bugfix
 Changelog
 CHANGELOG
 ChatGPT
@@ -6,5 +7,7 @@ GPT
 md
 OpenAI
 pylint
+repo
+solutioning
 YAML
 yamllint
