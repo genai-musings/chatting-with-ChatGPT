@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.0]
 
-- [ADDED] GitHub Issue Templates and associated GitHub Actions.
-- [ADDED] Imported modules to test files
+- [ADDED] GitHub Issue & PR Templates and associated GitHub Actions.
+- [CHANGED] Moved tests to dedicated tests folder
 
 ## [1.2.0] - 2023-06-04
 
