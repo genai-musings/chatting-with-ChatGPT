@@ -1,12 +1,13 @@
 """OpenAI Completion class unit tests."""
 import os
-import sys 
+import sys
 import unittest
 from unittest.mock import patch, MagicMock
 import openai
-from openAiCompletion import openAiCompletion
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from openAiCompletion import openAiCompletion
 
 class TestOpenAiCompletion(unittest.TestCase):
     def setUp(self):
