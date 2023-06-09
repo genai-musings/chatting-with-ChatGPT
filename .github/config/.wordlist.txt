@@ -6,6 +6,7 @@ ChatGPT
 davinci
 GPT
 md
+MPL
 OpenAI
 pylint
 repo
