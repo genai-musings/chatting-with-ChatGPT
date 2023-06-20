@@ -11,5 +11,6 @@ OpenAI
 pylint
 repo
 solutioning
+SuperLinter
 YAML
 yamllint

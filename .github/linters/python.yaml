@@ -1,0 +1,17 @@
+---
+version: 1
+pylint:
+  enabled: true
+  options: ""
+  ignore: |
+    missing-docstring,
+    invalid-name,
+    broad-except,
+    logging-fstring-interpolation,
+    wrong-import-position
+  conventions: ""
+  min-public-methods: 1
+flake8:
+  enabled: true
+  ignore: ""
+  max_line_length: 79
