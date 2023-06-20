@@ -5,6 +5,8 @@ CHANGELOG
 ChatGPT
 davinci
 GPT
+JSON
+Linter
 md
 MPL
 OpenAI

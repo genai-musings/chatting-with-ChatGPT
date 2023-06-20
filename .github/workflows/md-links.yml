@@ -6,6 +6,8 @@ on:
   schedule:
     - cron: "1 6 */3 * *"
   push:
+    branches:
+      - main
     paths:
       [
         "**.md",
@@ -14,6 +16,9 @@ on:
       ]
 
   pull_request:
+    types:
+      - opened
+      - synchronize
     paths:
       [
         "**.md",
