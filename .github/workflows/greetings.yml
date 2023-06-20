@@ -14,7 +14,7 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: >
-            Thank you for creating your first issue in this repository.
+            Thank you for creating your first Issue in this repository.
             We will review it and get back to you shortly.
           pr-message: >
             Thank you for submitting your first Pull Request to this repository.

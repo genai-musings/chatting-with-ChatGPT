@@ -1,0 +1,37 @@
+---
+# GitHub workflow file
+name: Check links in markdown
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      [
+        "**.md",
+        ".github/config/md-link-check.json",
+        ".github/config/md-links.yml",
+      ]
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      [
+        "**.md",
+        ".github/config/md-link-check.json",
+        ".github/config/md-links.yml",
+      ]
+
+jobs:
+  check-links:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          config-file: ".github/config/md-link-check.json"
+          use-quiet-mode: "yes"
