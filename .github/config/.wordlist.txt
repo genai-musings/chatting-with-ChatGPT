@@ -15,4 +15,5 @@ repo
 solutioning
 SuperLinter
 YAML
+yml
 yamllint
