@@ -3,8 +3,6 @@
 name: Check links in markdown
 
 on:
-  schedule:
-    - cron: "1 6 */3 * *"
   push:
     branches:
       - main
