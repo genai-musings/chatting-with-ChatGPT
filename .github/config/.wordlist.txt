@@ -3,6 +3,7 @@ Bugfix
 Changelog
 CHANGELOG
 ChatGPT
+CodeQL
 davinci
 GPT
 JSON
