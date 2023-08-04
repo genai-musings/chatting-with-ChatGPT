@@ -9,5 +9,5 @@
     { "pattern": "assets/" },
     { "pattern": "main/export/" }
   ],
-  "aliveStatusCodes": [200, 206, 429]
+  "aliveStatusCodes": [200, 206, 403, 429]
 }
