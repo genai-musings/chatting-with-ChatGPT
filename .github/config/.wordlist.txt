@@ -18,6 +18,7 @@ MPL
 OpenAI
 PR
 pylint
+README
 repo
 solutioning
 SuperLinter
