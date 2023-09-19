@@ -36,7 +36,7 @@ jobs:
           VALIDATE_JSON: true
           VALIDATE_MD: true
           VALIDATE_PYTHON: true
-          ALIDATE_SHELL_SHFMT: true
+          VALIDATE_SHELL_SHFMT: true
           VALIDATE_YML: true
           # Flag to enable additional information about the linter, versions, and additional output.
           ACTIONS_RUNNER_DEBUG: false
