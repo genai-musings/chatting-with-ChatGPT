@@ -18,7 +18,7 @@ jobs:
           DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKER_PASS: ${{ secrets.DOCKERHUB_PASSWORD }}
         with:
-          destination_container_repo: ${{ secrets.DOCKERHUB_USERNAME }}/template-repo-template
+          destination_container_repo: ${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt
           provider: dockerhub
           short_description: 'Sample Python application for chatting with ChatGPT via API.'
           readme_file: 'README.md'
