@@ -9,6 +9,7 @@
 [![Unit-Tests](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/test.yaml/badge.svg)](https://github.com/actions/setup-python)
 [![Code-Coverage](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/coverage.yaml/badge.svg)](https://github.com/actions/setup-python)
 [![Docker-Build-Push](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/docker-build-push.yml/badge.svg)](https://hub.docker.com/)
+[![Docker-Push-README](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/docker-push-readme.yml/badge.svg)](https://hub.docker.com/)
 
 Repository for chatting with ChatGPT.
 

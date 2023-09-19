@@ -1,6 +1,9 @@
 # Use a base Python image
 FROM python:3.11
 
+LABEL maintainer=“tom_halpin@hotmail.com”
+LABEL description="Sample Python application for chatting with ChatGPT via API."
+
 # Set the working directory inside the container
 WORKDIR /app
 
