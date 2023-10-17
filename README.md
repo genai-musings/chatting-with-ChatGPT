@@ -53,7 +53,7 @@ Run the Docker image as a container.
 
 ```shell
 export OPENAI_KEY="Your OpenAI key"
-docker run -it -e OPENAI_KEY= "Your OpenAI Key" chatting-with-chatgpt
+docker run -it -e OPENAI_KEY=$OPENAI_KEY chatting-with-chatgpt
 ```
 
 ## To pull and run an instance of the Docker image from Docker Hub
