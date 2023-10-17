@@ -3,6 +3,7 @@ Bugfix
 Changelog
 CHANGELOG
 ChatGPT
+CODEOWNERS
 CodeQL
 davinci
 Dockerfile

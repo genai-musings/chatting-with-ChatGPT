@@ -5,13 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.1] - 2023-10-17
+
+- [CHANGED] Updates to README.md
+- [CHANGED] Updates to Dockerfile maintainers and CODEOWNERS
+- [ADDED] Ensured docker image pushed to Docker Hub before README.md
+
 ## [1.6.0] - 2023-09-19
 
 - [ADDED] GitHub Action Linting to Super-Linter workflow
 - [ADDED] Shell Script Linting to Super-Linter workflow
 - [ADDED] Maintainer and description labels to Dockerfile
 - [ADDED] Workflow to automatically update Image description on Docker Hub with contents of README.md
-- [CHANGED] Updates to README.md.
+- [CHANGED] Updates to README.md
 
 ## [1.5.2] - 2023-08-04
 
