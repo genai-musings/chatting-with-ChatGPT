@@ -70,7 +70,7 @@ Replace <dockerhub-username> with your Docker Hub username and <tag> with the sp
 
 ```shell
 export OPENAI_KEY="Your OpenAI key"
-docker run -it -e OPENAI_KEY= "Your OpenAI Key" <dockerhub-username>/chatting-with-chatgpt:<tag>
+docker run -it -e OPENAI_KEY=$OPENAI_KEY <dockerhub-username>/chatting-with-chatgpt:<tag>
 ```
 
 ## OpenAI API Reference
