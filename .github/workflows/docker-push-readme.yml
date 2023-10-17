@@ -1,9 +1,13 @@
 name: Push README to Docker Hub
 
 on:
-    push:
-      branches:
-        - main
+  workflow_run:
+    workflows: "Build and Push Docker Image"
+    types:
+      - completed
+  push:
+    branches:
+      - main
 
 jobs:
   PushContainerReadme:
