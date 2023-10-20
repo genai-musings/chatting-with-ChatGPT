@@ -1,7 +1,9 @@
 """main program entry point"""
 import os
+import sys
 import logging
 import openai
+
 from openAiCompletion import openAiCompletion
 
 def main():
@@ -18,7 +20,7 @@ def main():
         prompt = str(input())
 
         if prompt == "":
-            break
+            sys.exit(0)
 
         try:
             response = client.generate_response(prompt)
