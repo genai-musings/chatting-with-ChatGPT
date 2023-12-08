@@ -1,13 +1,13 @@
 import openai
 
 class openAiCompletion:
-    def __init__(self, api_key, engine="text-davinci-003"):
+    def __init__(self, api_key, engine="gpt-3.5-turbo-instruct"):
         """
         Initialize the openAICompletion class.
 
         Args:
             api_key (str): OpenAI API key for authentication.
-            engine (str, optional): The engine to use for text generation. Default is "text-davinci-003".
+            engine (str, optional): The engine to use for text generation. Default is "gpt-3.5-turbo-instruct".
 
         Constructor used to set the OpenAI API key and the default engine for text generation.
         """
