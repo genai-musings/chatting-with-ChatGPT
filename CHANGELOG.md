@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.7.0] - 2024-08-08
 
 - [ADDED] Safety GitHub Action workflow to check Python dependencies for known security vulnerabilities.
-- [ADDED] Added Trivy scan of the Docker image for vulnerabilities
+- [ADDED] Trivy scan of the Docker image for vulnerabilities
 
 ## [1.6.3] - 2023-12-08
 
