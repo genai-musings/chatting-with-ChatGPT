@@ -1,0 +1,5 @@
+---
+security:
+  ignore-vulnerabilities:
+    70612:
+      reason: ignoring as per CVE-2019-8341 maintainer doesn't believe it is a valid vulnerability

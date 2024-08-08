@@ -1,0 +1,38 @@
+name: Safety Check
+
+# Description: This GitHub Action workflow checks the Python dependencies for known security vulnerabilities
+# using the 'safety' tool. It runs on every push to the main branch and on pull requests targeting the main branch.
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install safety
+        run: |
+          pip install safety
+
+      - name: Run safety check
+        run: |
+          safety check --full-report --policy-file .github/config/.safety-policy.yml
