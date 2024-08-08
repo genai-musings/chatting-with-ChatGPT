@@ -1,4 +1,4 @@
-name: Build and Push Docker Image
+name: Build, Scan, and Push Docker Image
 
 on:
   push:
@@ -19,10 +19,24 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-    - name: Build and Push Docker image
+    - name: Build Docker image
       run: |
         IMAGE_TAG="$(grep -oP '^## \[\K([\d.]+)' CHANGELOG.md | head -n 1)"
         docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}" .
+
+    - name: Scan Docker image for vulnerabilities with Trivy
+      uses: aquasecurity/trivy-action@master
+      with:
+        image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}
+        format: 'table'
+        exit-code: '1'
+        ignore-unfixed: true
+        vuln-type: 'os,library'
+        severity: 'HIGH,CRITICAL'
+
+    - name: Push Docker image
+      if: success()  # Only push if the Trivy scan is successful
+      run: |
         docker push "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}"
         docker tag "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}" "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:latest"
         docker push "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:latest"
