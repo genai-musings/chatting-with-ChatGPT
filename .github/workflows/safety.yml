@@ -35,4 +35,4 @@ jobs:
 
       - name: Run safety check
         run: |
-          safety check --full-report --policy-file ../config/.safety-policy.yml
+          safety check --full-report --policy-file .github/config/.safety-policy.yml
