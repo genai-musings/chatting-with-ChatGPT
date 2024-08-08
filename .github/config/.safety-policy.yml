@@ -1,0 +1,3 @@
+# .safety-policy.yml
+ignore_vulnerabilities:
+  - 70612 # ignoring as per https://data.safetycli.com/v/70612/97c/ maintainer doesn't believe it is a valid vulnerability

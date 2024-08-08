@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.7.0] - 2024-08-08
 
-- [ADDED] Saftey GitHub Action workflow to check Python dependencies for known security vulnerabilities.
+- [ADDED] Safety GitHub Action workflow to check Python dependencies for known security vulnerabilities.
 
 ## [1.6.3] - 2023-12-08
 
