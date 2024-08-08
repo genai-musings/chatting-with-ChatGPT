@@ -2,6 +2,7 @@
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 [![Bandit](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/bandit.yml/badge.svg)](https://github.com/genai-musings/chatting-with-ChatGPT/actions/new?category=security)
+[![Safety Check](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/safety.yml/badge.svg)](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/safety.yml)
 [![Super-Linter](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 [![CodeQL](https://github.com/genai-musings/chatting-with-ChatGPT/workflows/CodeQL/badge.svg?branch=main)
 [![Markdown Links Check](https://github.com/genai-musings/chatting-with-ChatGPT/actions/workflows/md-links.yml/badge.svg)](https://github.com/gaurav-nelson/github-action-markdown-link-check)
