@@ -2,3 +2,5 @@ openai
 pylint
 pytest
 requests
+setuptools>=70.0.0
+
