@@ -21,7 +21,7 @@ jobs:
 
     - name: Set IMAGE_TAG variable
       id: image_tag
-      run: echo "IMAGE_TAG=$(grep -oP '^## \[\K([\d.]+)' CHANGELOG.md | head -n 1)" >> $GITHUB_ENV
+      run: echo "IMAGE_TAG=$(grep -oP '^## \[\K([\d.]+)' CHANGELOG.md | head -n 1)" >> "$GITHUB_ENV"
 
     - name: Build Docker image
       run: |
