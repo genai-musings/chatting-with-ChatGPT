@@ -19,15 +19,18 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
+    - name: Set IMAGE_TAG variable
+      id: image_tag
+      run: echo "IMAGE_TAG=$(grep -oP '^## \[\K([\d.]+)' CHANGELOG.md | head -n 1)" >> "$GITHUB_ENV"
+
     - name: Build Docker image
       run: |
-        IMAGE_TAG="$(grep -oP '^## \[\K([\d.]+)' CHANGELOG.md | head -n 1)"
-        docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}" .
+        docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${{ env.IMAGE_TAG }}" .
 
     - name: Scan Docker image for vulnerabilities with Trivy
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}
+        image-ref: ${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${{ env.IMAGE_TAG }}
         format: 'table'
         exit-code: '1'
         ignore-unfixed: true
@@ -37,6 +40,6 @@ jobs:
     - name: Push Docker image
       if: success()  # Only push if the Trivy scan is successful
       run: |
-        docker push "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}"
-        docker tag "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${IMAGE_TAG}" "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:latest"
+        docker push "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${{ env.IMAGE_TAG }}"
+        docker tag "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:${{ env.IMAGE_TAG }}" "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:latest"
         docker push "${{ secrets.DOCKERHUB_USERNAME }}/chatting-with-chatgpt:latest"
