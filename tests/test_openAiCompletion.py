@@ -16,7 +16,7 @@ class TestOpenAiCompletion(unittest.TestCase):
         self.api_key = 'mock_api_key'
         self.engine = 'gpt-4'
         self.client = openAiCompletion(api_key=self.api_key)
-"""
+    """
     @patch('openAiCompletion.OpenAI')  # Patch the method correctly
     def test_generate_response(self, mock_create):
         # Set up a mock return value for openai.ChatCompletion.create
@@ -36,7 +36,7 @@ class TestOpenAiCompletion(unittest.TestCase):
                 "content": 'mock_prompt',
             }]
         )
-"""
+    """
     @patch('openAiCompletion.OpenAI')
     def test_generate_response_with_invalid_api_key(self, mock_openai):
         # Simulate an OpenAIError when calling openai.Completion.create
