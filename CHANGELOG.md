@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.8.0] - 2024-08-13
 
-- [ADDED] Upgraded to [version 1.0.0 of the OpenaAI API](https://github.com/openai/openai-python/discussions/742)
+- [ADDED] Upgraded to [version 1.0.0 of the OpenAI API](https://github.com/openai/openai-python/discussions/742)
 
 ## [1.7.0] - 2024-08-09
 
