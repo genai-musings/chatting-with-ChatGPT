@@ -48,7 +48,7 @@ class TestOpenAiCompletion(unittest.TestCase):
 
         # Test that an OpenAIError is raised with the expected message
         with self.assertRaises(openai.OpenAIError) as cm:
-            self.client.generate_response('mock_prompt')
+            self.client.generate_response('gpt-4', 'mock_prompt')
         the_exception = cm.exception
         self.assertEqual(str(the_exception), 'Invalid API key')
 
