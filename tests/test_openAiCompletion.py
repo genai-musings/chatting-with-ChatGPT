@@ -25,7 +25,7 @@ class TestOpenAiCompletion(unittest.TestCase):
         mock_create.return_value = mock_response
 
         # Test the generate_response method
-        response = self.client.generate_response('mock_prompt')
+        response = self.client.generate_response('gpt-4', 'mock_prompt')
         self.assertEqual(response, 'mock_response')
         mock_create.assert_called_once_with(
             model="gpt-4",
@@ -39,7 +39,7 @@ class TestOpenAiCompletion(unittest.TestCase):
 
         # Test that an OpenAIError is raised with the expected message
         with self.assertRaises(openai.OpenAIError) as cm:
-            self.client.generate_response('mock_prompt')
+            self.client.generate_response('gpt-4', 'mock_prompt')
         the_exception = cm.exception
         self.assertEqual(str(the_exception), 'Invalid API key')
 
