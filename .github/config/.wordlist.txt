@@ -5,6 +5,7 @@ CHANGELOG
 ChatGPT
 CODEOWNERS
 CodeQL
+DAST
 davinci
 Dockerfile
 Dockerized
@@ -22,6 +23,7 @@ PR
 pylint
 README
 repo
+SAST
 solutioning
 SuperLinter
 Trivy
