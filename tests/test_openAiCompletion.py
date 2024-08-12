@@ -15,8 +15,7 @@ class TestOpenAiCompletion(unittest.TestCase):
     def setUp(self):
         # Initialize common values for testing
         self.api_key = 'api_key'
-        self.engine = 'engine'
-        self.client = openAiCompletion(api_key=self.api_key, engine=self.engine)
+        self.client = openAiCompletion(api_key=self.api_key)
 
     # This test case tests that the generate_response method returns
     # the correct response when called with a valid prompt.
@@ -32,12 +31,8 @@ class TestOpenAiCompletion(unittest.TestCase):
         response = self.client.generate_response('mock_prompt')
         self.assertEqual(response, 'mock_response')
         mock_create.assert_called_once_with(
-            engine=self.engine,
-            prompt='mock_prompt',
-            max_tokens=2048,
-            n=1,
-            stop=None,
-            temperature=0.7
+            model="gpt-4",
+            prompt='mock_prompt'
         )
 
     # This test case checks that the generate_response method raises
@@ -47,7 +42,7 @@ class TestOpenAiCompletion(unittest.TestCase):
     def test_generate_response_with_invalid_api_key(self, mock_create):
         # Set the API key to None to simulate an invalid key
         openai.api_key = None
-        self.client = openAiCompletion(api_key=None, engine=self.engine)
+        self.client = openAiCompletion(api_key=None)
         # Simulate an OpenAIError when calling openai.Completion.create
         mock_create.side_effect = openai.OpenAIError('Invalid API key')
 

@@ -23,7 +23,7 @@ def main():
             sys.exit(0)
 
         try:
-            response = client.generate_response(prompt)
+            response = client.generate_response("gpt-4", prompt)
             print(response)
         except openai.OpenAIError as e:
             # Handle the exception
@@ -34,7 +34,7 @@ def main():
             # Handle the exception
             # Log the error message and exception type
             logging.error(f"Error: {e}", exc_info=True)
-            print("An error occurred, please try again.")
+            print(f"An error occurred, please try again:  {e}")
 
 if __name__ == "__main__":
     main()

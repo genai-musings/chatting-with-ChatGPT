@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.0] - 2024-08-13
+
+- [ADDED] Upgraded to [version 1.0.0 of the OpenaAI API](https://github.com/openai/openai-python/discussions/742)
+
+## [1.7.0] - 2024-08-09
+
+- [ADDED] SAST Safety GitHub Action workflow to check Python dependencies for known security vulnerabilities.
+- [ADDED] DAST Trivy scan of the Docker image for vulnerabilities
+- [FIXED] Vulnerability in docker imaged reported by Trivy
+
 ## [1.7.0] - 2024-08-09
 
 - [ADDED] Safety GitHub Action workflow to check Python dependencies for known security vulnerabilities.
