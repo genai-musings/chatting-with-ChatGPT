@@ -7,6 +7,13 @@ LABEL description="Sample Python application for chatting with ChatGPT via API."
 # Set the working directory inside the container
 WORKDIR /app
 
+# Fix for DAST error reported by Trivy => libpq-dev │ CVE-2024-7348 │ HIGH
+# Install system dependencies and upgrade libpq-dev and libpq5
+RUN apt-get update && \
+    apt-get install -y libpq-dev libpq5 && \
+    apt-get install --only-upgrade -y libpq-dev libpq5 && \
+    apt-get clean
+
 # Copy the requirements.txt file to the working directory
 COPY requirements.txt .
 

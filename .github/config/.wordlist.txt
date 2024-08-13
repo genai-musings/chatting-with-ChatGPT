@@ -5,6 +5,7 @@ CHANGELOG
 ChatGPT
 CODEOWNERS
 CodeQL
+CVE
 DAST
 davinci
 Dockerfile
