@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.8.1] - 2024-08-13
 
-- [FIXED] Vulnerability in docker imaged reported by Trivy
+- [FIXED] Vulnerability in docker image reported by Trivy => - │ CVE-2024-7348 │ HIGH
 
 ## [1.8.0] - 2024-08-12
 
