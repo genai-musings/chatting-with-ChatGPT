@@ -8,7 +8,7 @@ from openAiCompletion import openAiCompletion
 
 def main():
 
-    client = openAiCompletion(os.getenv('OPENAI_KEY') )
+    client = openAiCompletion(os.getenv('OPENAI_API_KEY'))
 
     # Configure logging
     logging.basicConfig(filename="error.log", level=logging.ERROR)
