@@ -31,12 +31,18 @@ jobs:
           # Install other dependencies if needed
 
       - name: Run tests with coverage
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: coverage run -m pytest
 
       - name: Generate coverage report
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: coverage html
 
       - name: Check coverage threshold
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           COVERAGE_THRESHOLD=70
           COVERAGE_PERCENTAGE=$(coverage report | grep TOTAL | awk '{print $NF}')
