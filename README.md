@@ -38,7 +38,7 @@ pytest
 
 The username and password for Docker Hub are stored as secrets this GitHub repository.
 
-**Note:** To set up the secrets in your GitHub repository, go to the repository page, navigate to the "Settings" tab, and then select "Secrets" from the left menu. Add a secret named DOCKERHUB_USERNAME with the Docker Hub username to be used, and another secret named DOCKERHUB_PASSWORD with the Docker Hub password to be used.
+**Note:** To set up the secrets in your GitHub repository, go to the repository page, navigate to the "Settings" tab, and then select "Secrets" from the left menu. Add a repository secret named DOCKERHUB_USERNAME with the Docker Hub username to be used, a repository secret named DOCKERHUB_PASSWORD with the Docker Hub password to be used and a repository secret named OPENAI_API_KEY with your OpenAI key.
 
 ### Build
 
