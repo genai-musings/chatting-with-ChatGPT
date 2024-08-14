@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.2] - 2024-08-14
+
+- [FIXED] Updated code and documentation to use OPENAI_API_KEY environment variable
+- [FIXED] Workaround for mocking issue with some unit tests
+
 ## [1.8.1] - 2024-08-13
 
 - [FIXED] Vulnerability in docker image reported by Trivy => - │ CVE-2024-7348 │ HIGH
@@ -12,12 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.8.0] - 2024-08-12
 
 - [ADDED] Upgraded to [version 1 of the OpenAI API](https://github.com/openai/openai-python/discussions/742)
-
-## [1.7.0] - 2024-08-09
-
-- [ADDED] SAST Safety GitHub Action workflow to check Python dependencies for known security vulnerabilities.
-- [ADDED] DAST Trivy scan of the Docker image for vulnerabilities
-- [FIXED] Vulnerability in docker imaged reported by Trivy
 
 ## [1.7.0] - 2024-08-09
 

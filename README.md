@@ -21,7 +21,7 @@ Repository for chatting with ChatGPT.
 Your OpenAI key is passed to program via an environment variable
 
 ```shell
-export OPENAI_KEY="Your OpenAI key"
+export OPENAI_API_KEY="Your OpenAI key"
 python main.py
 ```
 
@@ -53,8 +53,8 @@ docker build -t chatting-with-chatgpt .
 Run the Docker image as a container.
 
 ```shell
-export OPENAI_KEY="Your OpenAI key"
-docker run -it -e OPENAI_KEY=$OPENAI_KEY chatting-with-chatgpt
+export OPENAI_API_KEY="Your OpenAI key"
+docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY chatting-with-chatgpt
 ```
 
 ## To pull and run an instance of the Docker image from Docker Hub
@@ -70,8 +70,8 @@ Replace <dockerhub-username> with your Docker Hub username and <tag> with the sp
 ### Run
 
 ```shell
-export OPENAI_KEY="Your OpenAI key"
-docker run -it -e OPENAI_KEY=$OPENAI_KEY <dockerhub-username>/chatting-with-chatgpt:<tag>
+export OPENAI_API_KEY="Your OpenAI key"
+docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY <dockerhub-username>/chatting-with-chatgpt:<tag>
 ```
 
 ## OpenAI API Reference
