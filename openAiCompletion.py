@@ -37,4 +37,3 @@ class openAiCompletion:
             ],
         )
         return completion.choices[0].message.content
-

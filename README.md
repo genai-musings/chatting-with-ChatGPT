@@ -14,19 +14,28 @@
 
 Repository for chatting with ChatGPT.
 
- This repository contains Python code, and associated unit tests, which uses the OpenAI API to perform language generation. The code takes the input from the user and generates a response using the "gpt-4" model.
+This repository contains Python code, and associated unit tests, for an application which uses the OpenAI API to perform language generation.
 
-## To run program
+The application a simple command line program takes the input from the user and generates a response using the "gpt-4" model.
 
-Your OpenAI key is passed to program via an environment variable
+## To run application
+
+You will need an OpenAI API Key.
+
+To get an Open AI Key you need to follow these steps:
+
+1. Create an OpenAI Account via the [OpenAI website](https://openai.com/)
+
+2. Login to your account and browse to [OpenAI API Keys](https://platform.openai.com/account/api-keys)
+
+3. Select "Create new secret key".
+
+Once you have created an OpenAI API key, you need to pass it to the application via an environment variable
 
 ```shell
-export OPENAI_API_KEY="Your OpenAI key"
+export OPENAI_API_KEY="Your OpenAI API Key"
 python main.py
 ```
-
-To generate an OpenAI key browse to [OpenAI API Keys](https://platform.openai.com/account/api-keys) and select "Create new secret key".
-
 
 ## To run unit tests
 
@@ -38,7 +47,7 @@ pytest
 
 The username and password for Docker Hub are stored as secrets this GitHub repository.
 
-**Note:** To set up the secrets in your GitHub repository, go to the repository page, navigate to the "Settings" tab, and then select "Secrets" from the left menu. Add a repository secret named DOCKERHUB_USERNAME with the Docker Hub username to be used, a repository secret named DOCKERHUB_PASSWORD with the Docker Hub password to be used and a repository secret named OPENAI_API_KEY with your OpenAI key.
+**Note:** To set up the secrets in your GitHub repository, go to the repository page, navigate to the "Settings" tab, and then select "Secrets" from the left menu. Add a repository secret named DOCKERHUB_USERNAME with the Docker Hub username to be used, a repository secret named DOCKERHUB_PASSWORD with the Docker Hub password to be used and a repository secret named OPENAI_API_KEY with your OpenAI API Key.
 
 ### Build
 
@@ -53,7 +62,7 @@ docker build -t chatting-with-chatgpt .
 Run the Docker image as a container.
 
 ```shell
-export OPENAI_API_KEY="Your OpenAI key"
+export OPENAI_API_KEY="Your OpenAI API Key"
 docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY chatting-with-chatgpt
 ```
 
@@ -70,10 +79,10 @@ Replace <dockerhub-username> with your Docker Hub username and <tag> with the sp
 ### Run
 
 ```shell
-export OPENAI_API_KEY="Your OpenAI key"
+export OPENAI_API_KEY="Your OpenAI API Key"
 docker run -it -e OPENAI_API_KEY=$OPENAI_API_KEY <dockerhub-username>/chatting-with-chatgpt:<tag>
 ```
 
 ## OpenAI API Reference
 
-For more information on the API available see the [OpenAI API Reference Documentation](https://platform.openai.com/docs/api-reference).
+For more information on the API available from OpenAI see the [OpenAI API Reference Documentation](https://platform.openai.com/docs/api-reference).
