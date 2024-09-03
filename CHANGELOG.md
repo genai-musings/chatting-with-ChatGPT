@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.8.3] - 2024-09-03
 
 - [CHANGED] Updates to README.md
-- [ADDED] Improved error handling if OPENAI_API_KEY environment variable is not set.
+- [ADDED] Improved error handling if OPENAI_API_KEY environment variable is not set
+- [FIXED] Vulnerability in library libaom3 used docker image as reported by Trivy => - CVE-2024-5171  │ CRITICAL
+- [FIXED] Vulnerability in library linux-libc-dev used docker image as reported by Trivy
 
 ## [1.8.2] - 2024-08-14
 
@@ -17,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.8.1] - 2024-08-13
 
-- [FIXED] Vulnerability in docker image reported by Trivy => - │ CVE-2024-7348 │ HIGH
+- [FIXED] Vulnerability in docker image reported by Trivy => - CVE-2024-7348 │ HIGH
 
 ## [1.8.0] - 2024-08-12
 
