@@ -8,6 +8,7 @@ CodeQL
 CVE
 DAST
 davinci
+dev
 Dockerfile
 Dockerized
 DOCKERHUB
@@ -16,7 +17,10 @@ DOCKERHUB_PASSWORD
 gpt
 GPT
 JSON
+libc
+libaom
 Linter
+linux
 md
 MPL
 OpenAI
