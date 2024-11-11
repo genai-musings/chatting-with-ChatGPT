@@ -11,7 +11,7 @@ def main():
     # Check if the OPENAI_API_KEY environment variable is set
     api_key = os.getenv('OPENAI_API_KEY')
     if not api_key:
-        print("Error: The environment variable 'OPENAI_API_KEY' is not set, please set it before continuing.")
+        print("Error: The environment variable 'OPENAI_API_KEY' is not set. Please set it before continuing.")
         print("       Refer to the README.md for instructions on how to create an OpenAI API Key.")
         sys.exit(1)  # Exit the application with a non-zero status code
 
