@@ -14,7 +14,7 @@
 
 Repository for chatting with ChatGPT.
 
-This repository contains Python code, and associated unit tests, for an application which uses the OpenAI API to perform language generation.
+This repository contains Python code, and associated unit tests, for an application which uses the OpenAI API to perform language generation. The application uses GitHub workflows for continuous integration and continuous deployment.
 
 The application a simple command line program takes the input from the user and generates a response using the "gpt-4" model.
 
